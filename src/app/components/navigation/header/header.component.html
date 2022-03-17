@@ -1,0 +1,30 @@
+
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a routerLink="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a class="nav-link js-scroll-trigger smooth-scroll" href="#about">About me</a>
+            </li>
+            <li>
+                <a class="nav-link js-scroll-trigger smooth-scroll" href="#skills">Skills</a>
+            </li>
+            <li>
+                <a class="nav-link js-scroll-trigger smooth-scroll" href="#curriculum">Curriculum</a>
+            </li>
+            <li>
+                <a class="nav-link js-scroll-trigger smooth-scroll" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a class="nav-link js-scroll-trigger smooth-scroll" href="#contact-me">Contact me</a>
+            </li>
+        </ul>
+    </div>
+  </mat-toolbar>
