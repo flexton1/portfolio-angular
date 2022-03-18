@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTooltipModule} from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu'
 
 
 
@@ -52,7 +53,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     NgbModule,
     FlexLayoutModule,
     MatTooltipModule,
-    
+    MatMenuModule
 
    
     

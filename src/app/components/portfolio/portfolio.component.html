@@ -1,14 +1,26 @@
 <div class="container">
-    <h1>Portfolio</h1>
-    
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+  <h1>Portfolio</h1>
+  <hr />
+  <div class="d-flex flex-wrap justify-content-center portfolio-box">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="assets/img/weathercard.jpg"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">My weather app</h5>
+        <p class="card-text">
+          A quick app to get information on current weather
+        </p>
+           <button style="border: solid 0.5px;" mat-button [matMenuTriggerFor]="menu">Go to project</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item><a href="https://github.com/flexton1/weather-app" target="_blank">Github repo</a>
+  </button>
+  <button mat-menu-item><a href="https://flexton1.github.io/weather-app/" target="_blank">Live view</a>
+  </button>
+</mat-menu>
       </div>
-
-    
     </div>
+  </div>
+</div>
