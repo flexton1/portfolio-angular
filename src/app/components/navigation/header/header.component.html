@@ -6,24 +6,22 @@
         </button>
     </div>
     <div>
-        <a routerLink="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <span (click)="toHome()" id="home" routerLink="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</span>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
             <li>
-                <a class="nav-link js-scroll-trigger smooth-scroll" href="#about">About me</a>
+                <span (click)="toAbout()" class="nav-link js-scroll-trigger smooth-scroll">About me</span>
             </li>
             <li>
-                <a class="nav-link js-scroll-trigger smooth-scroll" href="#skills">Skills</a>
+                <span (click)="toSkills()" class="nav-link js-scroll-trigger smooth-scroll">Skills</span>
+            </li>
+            
+            <li>
+                <span (click)="toPortfolio()" class="nav-link js-scroll-trigger smooth-scroll">Portfolio</span>
             </li>
             <li>
-                <a class="nav-link js-scroll-trigger smooth-scroll" href="#curriculum">Curriculum</a>
-            </li>
-            <li>
-                <a class="nav-link js-scroll-trigger smooth-scroll" href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a class="nav-link js-scroll-trigger smooth-scroll" href="#contact-me">Contact me</a>
+                <span (click)="toContact()" class="nav-link js-scroll-trigger smooth-scroll">Contact me</span>
             </li>
         </ul>
     </div>

@@ -1,8 +1,13 @@
-a {
+span {
     text-decoration: none;
     color: white;
 }
-a:hover, a:active{
+
+span:hover {
+    cursor: pointer;
+}
+
+span:hover, span:active{
     color: lightgray;
 }
 .navigation-items{
@@ -12,8 +17,7 @@ a:hover, a:active{
 }
 mat-toolbar{
     border-radius: 3px;
-    position: sticky;
-    margin-top: 0;
+  
 }
 
 .fa {
