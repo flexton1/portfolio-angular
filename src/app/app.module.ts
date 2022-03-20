@@ -25,6 +25,7 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactformService } from './services/contactform.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
    
     
   ],
-  providers: [],
+  providers: [ContactformService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
