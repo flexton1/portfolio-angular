@@ -16,7 +16,7 @@ export class ContactPageComponent implements OnInit {
   FormData: FormGroup;
   ngOnInit(){
     this.FormData = this.builder.group({
-      Nameame: new FormControl('', [Validators.required]),
+      Name: new FormControl('', [Validators.required]),
       Email: new FormControl('',  [Validators.required, Validators.email]),
       Message: new FormControl('', [Validators.required])  }) 
   }
@@ -31,7 +31,7 @@ export class ContactPageComponent implements OnInit {
     console.warn(error.responseText)
     console.log({ error })
     })
-
+this.FormData.reset();
     }
 
 
