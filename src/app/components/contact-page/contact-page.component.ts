@@ -15,13 +15,14 @@ export class ContactPageComponent implements OnInit {
 
   FormData: FormGroup;
   ngOnInit(){
-    this.FormData = this.builder.group({
+    this.FormData = new FormGroup({
       Name: new FormControl('', [Validators.required]),
       Email: new FormControl('',  [Validators.required, Validators.email]),
       Message: new FormControl('', [Validators.required])  }) 
   }
 
   onSubmit(FormData: FormData) {
+    
     console.log(FormData)
     this.contact.PostMessage(FormData)
     .subscribe(response => {
