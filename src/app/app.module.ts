@@ -5,6 +5,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTooltipModule} from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu'
+import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 
 
@@ -26,6 +28,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactformService } from './services/contactform.service';
+import { AutofocusDirective } from './directives/autofocus.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,7 @@ import { ContactformService } from './services/contactform.service';
     SkillsComponent,
     CurriculumComponent,
     PortfolioComponent,
+    AutofocusDirective,
     
   ],
   imports: [
@@ -54,7 +58,9 @@ import { ContactformService } from './services/contactform.service';
     NgbModule,
     FlexLayoutModule,
     MatTooltipModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatFormFieldModule
 
    
     

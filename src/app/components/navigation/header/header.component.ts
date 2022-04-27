@@ -38,7 +38,7 @@ toPortfolio(){
 }
 
 toContact(){
-  document.getElementById("home")?.scrollIntoView({behavior: 'smooth'});
+  document.getElementById("contact")?.scrollIntoView({behavior: 'smooth'});
 }
 
 }

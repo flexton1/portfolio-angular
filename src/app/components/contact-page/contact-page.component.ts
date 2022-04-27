@@ -14,14 +14,17 @@ export class ContactPageComponent implements OnInit {
     private contact: ContactformService) { }
 
   FormData: FormGroup;
+  showValidationError: boolean = false;
   ngOnInit(){
-    this.FormData = this.builder.group({
-      Nameame: new FormControl('', [Validators.required]),
+    this.FormData = new FormGroup({
+      Name: new FormControl('', [Validators.required]),
       Email: new FormControl('',  [Validators.required, Validators.email]),
       Message: new FormControl('', [Validators.required])  }) 
   }
 
-  onSubmit(FormData: FormData) {
+  onSubmit(Form: FormGroup) {
+    let FormData = Form.value;
+    if(Form.invalid){return this.showValidationError = true;}
     console.log(FormData)
     this.contact.PostMessage(FormData)
     .subscribe(response => {
@@ -31,7 +34,8 @@ export class ContactPageComponent implements OnInit {
     console.warn(error.responseText)
     console.log({ error })
     })
-
+this.FormData.reset();
+return this.showValidationError = false;
     }
 
 
