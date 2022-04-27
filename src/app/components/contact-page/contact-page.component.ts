@@ -13,7 +13,7 @@ export class ContactPageComponent implements OnInit {
   constructor(private builder: FormBuilder,
     private contact: ContactformService) { }
 
-  FormData!: FormGroup;
+  FormData: FormGroup;
   showValidationError: boolean = false;
   ngOnInit(){
     this.FormData = new FormGroup({
