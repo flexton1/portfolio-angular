@@ -24,7 +24,7 @@
     </textarea>
     </div>
    <p *ngIf="FormData.status == 'INVALID' && showValidationError === true" id="form-invalid">Your form is invalid</p>
-   <p *ngIf="FormData.status == 'VALID'" id="form-valid">Your form is valid</p>
+   <p *ngIf="FormData.status == 'VALID' && showValidationError === true" id="form-valid">Your form is now valid</p>
     <button mat-button type="submit" class="mt-2">Submit</button>
 
 </form>
