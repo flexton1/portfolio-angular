@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { ContactformService } from 'src/app/services/contactform.service';
 
 
@@ -8,12 +9,14 @@ import { ContactformService } from 'src/app/services/contactform.service';
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss']
 })
-export class ContactPageComponent implements OnInit {
+export class ContactPageComponent implements OnInit, OnDestroy {
+
+  private _unsubscribeAll: Subject<void> = new Subject<void>;
 
   constructor(private builder: FormBuilder,
     private contact: ContactformService) { }
 
-  FormData: FormGroup;
+  FormData!: FormGroup;
   showValidationError: boolean = false;
   ngOnInit(){
     this.FormData = new FormGroup({
@@ -27,16 +30,23 @@ export class ContactPageComponent implements OnInit {
     if(Form.invalid){return this.showValidationError = true;}
     console.log(FormData)
     this.contact.PostMessage(FormData)
-    .subscribe(response => {
+    .pipe(takeUntil(this._unsubscribeAll))
+    .subscribe({ next : response => {
     
     console.log(response)
-    }, error => {
-    console.warn(error.responseText)
-    console.log({ error })
-    })
+    },
+    error: error => {
+      console.log(error);
+    }
+  
+  })
 this.FormData.reset();
 return this.showValidationError = false;
     }
 
+
+    ngOnDestroy(): void {
+      this._unsubscribeAll.next();
+    }
 
 }
