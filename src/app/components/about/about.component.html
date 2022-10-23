@@ -2,21 +2,18 @@
 
 <h1 class="text-monospace" id="about">About me</h1>
 <hr>
-<span _ngcontent-suw-c6 class="bar-title mb-5"></span>
+<!-- <span _ngcontent-suw-c6 class="bar-title mb-5">adadwadw</span> -->
 <div class="row">
     <div class="col-md-6 text-center">
 <img class="img-fluid rounded mx-auto" src="assets/img/profilna.jpg">
     </div>
     <div id="abouttext" class="col-md-6 d-flex align-items-center justify-content-center flex-column">
-<p>Interested in new technologies and working standards. Also implementing ideas for improving business processes. Passionate about front-end and back-end software engineering.</p>
+<p> {{aboutText1}} </p>
 
     <ul>
-        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Sarajevo, Bosnia and Herzegovina</li>
-        <li><i class="fa fa-envelope" aria-hidden="true"></i>harunjasarevic00@gmail.com</li>
-        <li><i class="fa fa-birthday-cake" aria-hidden="true"></i>Age: 21</li>
-        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>Bachelor's degree in Computer Science since June, 2022</li>
+        <li *ngFor="let item of listItems"><i class="{{item?.iconClass}}" aria-hidden="true"></i>{{item?.title}}</li>
     </ul>
-    <p>I am looking for an innovative and user-centric company to best meet customer needs, from their idea to the final delivery of their project, or participate in the improvement of an existing project.</p>
+    <p> {{aboutText2}} </p>
 </div>
 </div>
 

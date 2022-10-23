@@ -29,6 +29,7 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactformService } from './services/contactform.service';
 import { AutofocusDirective } from './directives/autofocus.directive';
+import { ScrollDirective } from './directives/scroll.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     CurriculumComponent,
     PortfolioComponent,
     AutofocusDirective,
+    ScrollDirective
     
   ],
   imports: [
