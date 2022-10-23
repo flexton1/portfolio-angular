@@ -2,7 +2,7 @@ export const cardTops = [
     {
         img: 'assets/img/ideallista.png',
         title: 'Ideallista V2',
-        card_text: 'My full stack application.',
+        card_text: 'An app for listening music.',
         git_backend: 'https://github.com/flexton1/IdealListaV2-spring',
         git_frontend: 'https://github.com/flexton1/idealListaV2',
         live_view: 'https://flexton1.github.io/idealListaV2/'
