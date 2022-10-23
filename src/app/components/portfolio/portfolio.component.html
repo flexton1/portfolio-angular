@@ -6,145 +6,38 @@
   <hr />
   <div class="d-flex flex-wrap justify-content-center portfolio-box">
 
-
+<ng-container *ngFor="let card of cards">
     <div class="card" style="width: 18rem">
-      <img
+      <img *ngIf="card?.img != ''"
         class="card-img-top"
-        src="assets/img/ideallista.png"
+        src="{{card?.img}}"
         alt="Card image cap"
       />
       <div class="card-body d-flex flex-column">
-        <h5 class="card-title">IdealLista V2</h5>
+        <h5 class="card-title">{{card?.title}}</h5>
         <p class="card-text">
-          My full stack application.
+          {{card?.card_text}}
         </p>
            <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu8">Go to project</button>
 <mat-menu id="ideallista-menu" #menu8="matMenu">
-  <button class="ideallista-button" mat-menu-item><a href="https://github.com/flexton1/IdealListaV2-spring" target="_blank">Github repo(backend)</a>
+  <button *ngIf="card.git_backend != ''" class="ideallista-button" mat-menu-item><a href="{{card?.git_backend}}" target="_blank">Github repo(backend)</a>
   </button>
-  <button class="ideallista-button" mat-menu-item><a href="https://github.com/flexton1/idealListaV2" target="_blank">Github repo(frontend)</a>
+  <button *ngIf="card.git_frontend != ''" class="ideallista-button" mat-menu-item><a href="{{card?.git_frontend}}" target="_blank">Github repo<span *ngIf="card?.git_backend != ''">(frontend)</span></a>
   </button>
-  <button class="ideallista-button" mat-menu-item><a href="https://flexton1.github.io/idealListaV2/" target="_blank">Live view</a>
-  </button>
-</mat-menu>
-      </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="assets/img/weathercard.jpg"
-        alt="Card image cap"
-      />
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">My weather app</h5>
-        <p class="card-text">
-          A quick app to get information on current weather
-        </p>
-           <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu2">Go to project</button>
-<mat-menu #menu2="matMenu">
-  <button mat-menu-item><a href="https://github.com/flexton1/weather-app" target="_blank">Github repo</a>
-  </button>
-  <button mat-menu-item><a href="https://flexton1.github.io/weather-app/" target="_blank">Live view</a>
+  <button *ngIf="card.live_view != ''" class="ideallista-button" mat-menu-item><a href="{{card?.live_view}}" target="_blank">Live view</a>
   </button>
 </mat-menu>
       </div>
     </div>
+  </ng-container>
 
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="assets/img/zvijerba.jpg"
-        alt="Card image cap"
-      />
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Zvijer.ba</h5>
-        <p class="card-text">
-          My first static page for a local bussiness
-        </p>
-           <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu">Go to project</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item><a href="https://github.com/flexton1/Moji-projekti/tree/gh-pages" target="_blank">Github repo</a>
-  </button>
-  <button mat-menu-item><a href="https://flexton1.github.io/Moji-projekti/" target="_blank">Live view</a>
-  </button>
-</mat-menu>
-      </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="assets/img/portfolio.jpg"
-        alt="Card image cap"
-      />
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Portfolio site</h5>
-        <p class="card-text">
-       My portfolio site (current site)
-        </p>
-           <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu1">Go to project</button>
-<mat-menu #menu1="matMenu">
-  <button mat-menu-item><a href="https://github.com/flexton1/portfolio-angular" target="_blank">Github repo</a>
-  </button>
-  <button mat-menu-item><a href="https://flexton1.github.io/portfolio-angular/" target="_blank">Live view</a>
-  </button>
-</mat-menu>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="assets/img/singensdoo.jpg"
-        alt="Card image cap"
-      />
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Singens d.o.o</h5>
-        <p class="card-text">
-          My second page for a local bussiness
-        </p>
-           <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu3">Go to project</button>
-<mat-menu #menu3="matMenu">
-  <button mat-menu-item><a href="https://github.com/flexton1/singens-doo/tree/gh-pages" target="_blank">Github repo</a>
-  </button>
-  <button mat-menu-item><a href="https://flexton1.github.io/singens-doo/home" target="_blank">Live view</a>
-  </button>
-</mat-menu>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="assets/img/studentska-sluzba.png"
-        alt="Card image cap"
-      />
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Studenska sluzba</h5>
-        <p class="card-text">
-          An app for saving student data in a school or gymnasium.
-        </p>
-           <button class="mt-auto" style="border: solid 0.1px; border-color: gray;" mat-button [matMenuTriggerFor]="menu10">Go to project</button>
-           <mat-menu id="ideallista-menu" #menu10="matMenu">
-            <button class="ideallista-button" mat-menu-item><a href="https://github.com/flexton1/studentska-sluzba" target="_blank">Github repo(backend)</a>
-            </button>
-            <button class="ideallista-button" mat-menu-item><a href="https://github.com/flexton1/take-home-page-angular" target="_blank">Github repo(frontend)</a>
-            </button>
-            <button class="ideallista-button" mat-menu-item><a href="https://flexton1.github.io/take-home-page-angular/" target="_blank">Live view</a>
-            </button>
-          </mat-menu>
-      </div>
-    </div>
+  
 
 
 
 
   </div>
-</div>
+</div> 
 
 
 

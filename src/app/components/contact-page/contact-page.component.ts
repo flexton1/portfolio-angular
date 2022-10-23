@@ -11,7 +11,7 @@ import { ContactformService } from 'src/app/services/contactform.service';
 })
 export class ContactPageComponent implements OnInit, OnDestroy {
 
-  private _unsubscribeAll: Subject<void> = new Subject<void>;
+  private _unsubscribeAll: Subject<void> = new Subject<void>();
 
   constructor(private builder: FormBuilder,
     private contact: ContactformService) { }
