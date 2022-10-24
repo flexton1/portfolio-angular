@@ -26,7 +26,7 @@ export const cardTops = [
     {
         img: 'assets/img/portfolio.jpg',
         title: 'My portfolio site (current site)',
-        card_text: 'An app for saving student data in a school or gymnasium built with Angular and Spring Boot.',
+        card_text: '',
         git_backend: '',
         git_frontend: 'https://github.com/flexton1/studentska-sluzba',
         live_view: 'https://flexton1.github.io/portfolio-angular/'
