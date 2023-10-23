@@ -6,15 +6,15 @@ export const listItems: any[] = [
       title: 'harunjasarevic00@gmail.com', iconClass: 'fa fa-envelope'
     },
     {
-      title: 'Age: 21', iconClass: 'fa fa-birthday-cake'
+      title: 'Age: 22', iconClass: 'fa fa-birthday-cake'
     },
     {
       title: 'Bachelor\'s degree in Computer Science since June, 2022', iconClass: 'fa fa-graduation-cap'
     },
-  
+
   ]
 
-export const aboutText1 = 
+export const aboutText1 =
 'Interested in new technologies and working standards. Also implementing ideas for improving business processes. Passionate about front-end and back-end software engineering.'
 
 export const aboutText2 =

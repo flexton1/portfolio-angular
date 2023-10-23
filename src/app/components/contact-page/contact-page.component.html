@@ -1,5 +1,5 @@
 <div class="container pb-5">
-   <h1 id="contact">Contact me</h1> 
+   <h1 id="contact">Contact me</h1>
    <hr>
 
 
@@ -7,20 +7,20 @@
     <div class="col-md-6 offset-md-3">
     <mat-card>
         <form [formGroup]="FormData" ><div class="form-group">
-    
+
         <label for="Email">Email</label>
         <input n type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="Email" id="email" required>
    <small id="emailHelp" class="form-text text-muted">Your email is used so I can reach out to you.</small>
 </div>
     <div class="form-group">
-        
+
     <label for="fullname">Name</label>
-    <input type="text" class="form-control" name="Fullname" placeholder="Name" formControlName="Name">
+    <input id="fullname" type="text" class="form-control" name="Fullname" placeholder="Name" formControlName="Name">
 
     </div>
     <div class="form-group">
     <label for="comment">Your message</label>
-    <textarea class="form-control" formControlName="Message" name="Comment">
+    <textarea id="comment" class="form-control" formControlName="Message" name="Comment">
     </textarea>
     </div>
    <p *ngIf="FormData.status == 'INVALID' && showValidationError === true" id="form-invalid">Your form is invalid</p>
